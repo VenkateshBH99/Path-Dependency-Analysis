@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+<head>
+<title>Generate PDA page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link href="{% static 'css/style2.css' %}" rel="stylesheet" />
+
+<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+<link href="{% static 'css/now-ui-kit.css' %}" rel="stylesheet" />
+<link href="{% static 'css/medium-editor.min.css' %}" rel="stylesheet">
+<!--//fonts-->
+</head>
+<body style="background-image: url('{% static 'images/3.jpg' %}')">
+<!--background-->
+<nav class="navbar navbar-expand-lg navbar-transparent" >
+        <div class="container">
+            <div class="collapse navbar-collapse justify-content-end" id="navigation" >
+                <ul class="navbar-nav nav-tabs">
+
+                    <li class="nav-item"><a href="{% url 'accounts:profile' pk=user_id %}" class="btn btn-neutral">Profile</a></li>
+                      <li class="nav-item"><a href="{% url 'accounts:logout' %}" class="btn btn-neutral">Logout</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-agile">
+	<div class="book-appointment">
+	<h2>Information</h2>
+
+  {% if predicted %}
+<div class="card" role="alert">
+
+<div class="card-body">
+      <div class="table-responsive justify-content-center">
+                       <table class="table">
+                           <thead>
+                               <tr>
+                                   <th>Output</th>
+                                   <th>Generated in local please check it</th>
+                               </tr>
+                           </thead>
+
+
+                       </table>
+                   </div>
+               </div>
+             </div>
+
+  {% endif %}
+
+			<form method="post">
+        {% csrf_token %}
+        <div class="center-agileits-w3layouts same">
+          <div class="gaps">
+            <p>filename<p>
+            {{form.filename}}
+          </div>
+
+         </div>
+
+				<div class="clear"></div>
+				<input type="submit" value="Generate" class="btn btn-primary">
+			</form>
+		</div>
+   </div>
+   <!--copyright-->
+
+		<!--//copyright-->
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<!-- Calendar -->
+				<link rel="stylesheet" href="css/jquery-ui.css" />
+				<script src="js/jquery-ui.js"></script>
+
+			<!-- //Calendar -->
+
+</body>
+</html>

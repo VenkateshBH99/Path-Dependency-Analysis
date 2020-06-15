@@ -1,0 +1,28 @@
+digraph "clusterCFG.py" {
+	graph [label="CFG.py"]
+	1 [label="while x1 > 0 and x2 > 0 and x3 > 0:
+"]
+	2 [label="if nondet():
+"]
+	4 [label="x1 = x1 - 1
+"]
+	4 -> 1 [label=""]
+	2 -> 4 [label="nondet()"]
+	6 [label="if notdet():
+"]
+	7 [label="x2 = x2 - 1
+"]
+	7 -> 1 [label=""]
+	6 -> 7 [label="notdet()"]
+	9 [label="x3 = x3 - 1
+"]
+	9 -> 1 [label=""]
+	6 -> 9 [label="(not notdet())"]
+	2 -> 6 [label="(not nondet())"]
+	1 -> 2 [label="x1 > 0 and x2 > 0 and x3 > 0"]
+	3 [label="assert x1 == 0 or x2 == 0 or x3 == 0
+"]
+	11 [label=""]
+	3 -> 11 [label="x1 == 0 or x2 == 0 or x3 == 0"]
+	1 -> 3 [label="(not (x1 > 0 and x2 > 0 and x3 > 0))"]
+}

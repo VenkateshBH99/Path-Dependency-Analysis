@@ -1,0 +1,8 @@
+digraph {
+	Q0 [label="while x1 > 0 and x2 > 0 and x3 > 0:
+ ^ x1 > 0 and x2 > 0 and x3 > 0 ^ while x1 > 0 and x2 > 0 and x3 > 0:
+ ^ x1 > 0 and x2 > 0 and x3 > 0 ^ while x1 > 0 and x2 > 0 and x3 > 0:
+ ^ x1 > 0 and x2 > 0 and x3 > 0"]
+	Q1 [label="(not (x1 > 0 and x2 > 0 and x3 > 0)) ^ Final"]
+	Q0 -> Q1
+}
