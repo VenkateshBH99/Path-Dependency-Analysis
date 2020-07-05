@@ -35,22 +35,27 @@ It supports following features:
   <img src="Screenshots/2.jpg" width="70%" height="70%" />
  </p>
  
- 
+ <h3> Program code </h3>
+ <p align="center">
+  <img src="Screenshots/6.jpg" width="70%" height="70%" />
+ </p> 
+
+<h3> Control flow graph </h3>
  <p align="center">
   <img src="Screenshots/3.jpg" width="70%" height="70%" />
  </p>
-        
+   
+ <h3> PDA </h3>     
  <p align="center">
   <img src="Screenshots/4.jpg" width="70%" height="70%" />
  </p>
 
+<h3> Merge of loops</h3>
  <p align="center">
   <img src="Screenshots/5.jpg" width="70%" height="70%" />
  </p>
 
-<p align="center">
-  <img src="Screenshots/6.jpg" width="70%" height="70%" />
- </p>
+
 Quick start
 -----------
 1. (optional) create virtual env ex. mkvirtualenv mytest_env
