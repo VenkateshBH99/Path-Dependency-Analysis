@@ -14,3 +14,46 @@ outputs as a set of symbolic constraints. For instance, we can use a loop summar
 properties after a loop; and in symbolic execution we can use it to guide test case generation. 
 The aim of this study is to explain the interlacing of multiple paths in a nested or non-nested loop and 
 to generate a summarization of disjunctive loops for such multi-path loops.
+
+
+
+
+It supports following features:
+
+*	Login/ Sign Up 
+*	Viewing and Editing Profile 
+*	User can enter the values of various parameters on the basis of which his risk factor will be calculated using machine learning algorithms.
+
+
+
+<p align="center">
+<img src="Screenshots/1.jpg" width="70%" height="70%" />
+</p>
+
+ 
+ <p align="center">
+  <img src="Screenshots/2.jpg" width="70%" height="70%" />
+ </p>
+ 
+ 
+ <p align="center">
+  <img src="Screenshots/3.jpg" width="70%" height="70%" />
+ </p>
+        
+ <p align="center">
+  <img src="Screenshots/4.jpg" width="70%" height="70%" />
+ </p>
+
+ <p align="center">
+  <img src="Screenshots/5.jpg" width="70%" height="70%" />
+ </p>
+
+<p align="center">
+  <img src="Screenshots/6.jpg" width="70%" height="70%" />
+ </p>
+Quick start
+-----------
+1. (optional) create virtual env ex. mkvirtualenv mytest_env
+2. pip install -r requirements.txt
+3. python manage.py migrate
+4. python manage.py runserver
