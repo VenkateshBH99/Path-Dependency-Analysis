@@ -1,18 +1,63 @@
 digraph {
 	q0 [label="q0: start"]
-	q1 [label="q1: start"]
-	q2 [label="q2: start"]
-	q3 [label="q3: start & final"]
-	q0 -> q0
+	q1 [label=q1]
+	q2 [label=q2]
+	q3 [label=q3]
+	q4 [label=q4]
+	q5 [label="q5: final"]
+	q6 [label=q6]
+	q7 [label=q7]
+	q8 [label=q8]
+	q9 [label=q9]
+	q10 [label=q10]
+	q11 [label=q11]
+	q12 [label=q12]
+	q13 [label=q13]
+	q14 [label=q14]
+	q15 [label=q15]
+	q16 [label=q16]
+	q17 [label=q17]
+	q18 [label="q18: final"]
+	q19 [label="q19: final"]
 	q0 -> q1
 	q0 -> q2
 	q0 -> q3
-	q1 -> q0
 	q1 -> q1
 	q1 -> q2
 	q1 -> q3
-	q2 -> q0
 	q2 -> q1
 	q2 -> q2
 	q2 -> q3
+	q3 -> q4
+	q3 -> q5
+	q3 -> q6
+	q4 -> q7
+	q4 -> q8
+	q4 -> q9
+	q6 -> q11
+	q6 -> q12
+	q6 -> q13
+	q6 -> q14
+	q6 -> q15
+	q7 -> q10
+	q8 -> q10
+	q9 -> q4
+	q9 -> q5
+	q9 -> q6
+	q10 -> q7
+	q10 -> q8
+	q10 -> q9
+	q11 -> q16
+	q12 -> q16
+	q13 -> q17
+	q14 -> q18
+	q14 -> q19
+	q15 -> q18
+	q15 -> q19
+	q16 -> q17
+	q17 -> q11
+	q17 -> q12
+	q17 -> q13
+	q17 -> q14
+	q17 -> q15
 }

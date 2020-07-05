@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
     <link href="{% static 'css/now-ui-kit.css' %}" rel="stylesheet" />
-
-
-
+    <title>Register</title>
   </head>
   <body>
 
@@ -49,13 +47,13 @@
           <form role="form" enctype="multipart/form-data" method="post">
               {% csrf_token %}
               <div class="card-header text-center form-group">
-							<h3 class="card-title title-up ">Sign Up</h3>
+							<h3 class="card-title title-up " >Sign Up</h3>
 
               {{ user_form}}
               {{ profile_form}}
 
 
-            <button type="submit" class="btn btn-round bg-transparent border">Sign Up</button>
+            <button type="submit" class="btn btn-round bg-transparent border" value="Sign Up">Sign Up</button>
               </div>
           </form>
           {% endif %}

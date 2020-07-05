@@ -1,8 +1,24 @@
 digraph {
-	Q0 [label="while x1 > 0 and x2 > 0 and x3 > 0:
- ^ x1 > 0 and x2 > 0 and x3 > 0 ^ while x1 > 0 and x2 > 0 and x3 > 0:
- ^ x1 > 0 and x2 > 0 and x3 > 0 ^ while x1 > 0 and x2 > 0 and x3 > 0:
- ^ x1 > 0 and x2 > 0 and x3 > 0"]
-	Q1 [label="(not (x1 > 0 and x2 > 0 and x3 > 0)) ^ Final"]
+	Q0 [label="flag = True
+ ^  ^  ^  ^ "]
+	Q1 [label="curr_block.exits ^ curr_block.exits ^ curr_block.exits ^ curr_block.exits ^ curr_block.exits ^ curr_block.exits ^ curr_block.exits ^ curr_block.exits"]
+	Q2 [label=" ^  ^  ^ "]
+	Q3 [label="block.exits ^ block.exits ^ block.exits ^  ^  ^  ^  ^  ^  ^ block.exits ^ block.exits ^ block.exits ^ to_visit ^ to_visit ^ to_visit"]
+	Q4 [label=" ^ (not to_visit) ^ (not to_visit) ^ (not to_visit)"]
+	Q5 [label=" ^ (not to_visit) ^ (not to_visit) ^ (not to_visit)"]
+	Q6 [label="curr_block.exits ^ curr_block.exits ^ curr_block.exits ^ curr_block.exits ^ curr_block.exits ^ curr_block.exits ^  ^  ^  ^  ^  ^  ^ curr_block.exits ^ curr_block.exits ^ curr_block.exits"]
+	Q7 [label=" ^  ^ "]
+	Q8 [label=" ^  ^ "]
+	Q9 [label="(not path_bloxk) ^ (not path_bloxk) ^ (not path_bloxk)"]
+	Q10 [label="path_bloxk ^ path_bloxk ^ path_bloxk ^ Final"]
 	Q0 -> Q1
+	Q1 -> Q2
+	Q2 -> Q3
+	Q3 -> Q4
+	Q4 -> Q5
+	Q5 -> Q6
+	Q6 -> Q7
+	Q7 -> Q8
+	Q8 -> Q9
+	Q9 -> Q10
 }

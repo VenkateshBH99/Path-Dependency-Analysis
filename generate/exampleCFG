@@ -1,28 +1,126 @@
 digraph "clusterCFG.py" {
 	graph [label="CFG.py"]
-	1 [label="while x1 > 0 and x2 > 0 and x3 > 0:
+	1 [label="flag = True
 "]
-	2 [label="if nondet():
+	2 [label="for exit_ in curr_block.exits:
 "]
-	4 [label="x1 = x1 - 1
+	3 [label="flag = False
+if exit_.target in visited:
 "]
-	4 -> 1 [label=""]
-	2 -> 4 [label="nondet()"]
-	6 [label="if notdet():
+	5 [label="ind = visited.index(exit_.target)
+cond[ind] = 'lh'
 "]
-	7 [label="x2 = x2 - 1
+	"5_calls" [label="visited.index" shape=box]
+	5 -> "5_calls" [label=calls style=dashed]
+	5 -> 2 [label=""]
+	3 -> 5 [label="exit_.target in visited"]
+	3 -> 2 [label="(exit_.target not in visited)"]
+	2 -> 3 [label="curr_block.exits"]
+	4 [label="assert visited
 "]
-	7 -> 1 [label=""]
-	6 -> 7 [label="notdet()"]
-	9 [label="x3 = x3 - 1
+	8 [label="while to_visit:
 "]
-	9 -> 1 [label=""]
-	6 -> 9 [label="(not notdet())"]
-	2 -> 6 [label="(not nondet())"]
-	1 -> 2 [label="x1 > 0 and x2 > 0 and x3 > 0"]
-	3 [label="assert x1 == 0 or x2 == 0 or x3 == 0
+	9 [label="block = to_visit.pop(0)
+visited.add(block)
+print(block.id)
 "]
-	11 [label=""]
-	3 -> 11 [label="x1 == 0 or x2 == 0 or x3 == 0"]
-	1 -> 3 [label="(not (x1 > 0 and x2 > 0 and x3 > 0))"]
+	"9_calls" [label="to_visit.pop
+visited.add
+print" shape=box]
+	9 -> "9_calls" [label=calls style=dashed]
+	11 [label="for exit_ in block.exits:
+"]
+	12 [label="if exit_.target in visited or exit_.target in to_visit:
+"]
+	14 [label=""]
+	15 [label="to_visit.append(exit_.target)
+"]
+	"15_calls" [label="to_visit.append" shape=box]
+	15 -> "15_calls" [label=calls style=dashed]
+	15 -> 11 [label=""]
+	14 -> 15 [label=""]
+	12 -> 14 [label="exit_.target in visited or exit_.target in to_visit"]
+	12 -> 15 [label="(not (exit_.target in visited or exit_.target in to_visit))"]
+	11 -> 12 [label="block.exits"]
+	13 [label=""]
+	13 -> 8 [label=""]
+	11 -> 13 [label=""]
+	9 -> 11 [label=""]
+	8 -> 9 [label=to_visit]
+	10 [label="assert visited
+"]
+	16 [label=""]
+	10 -> 16 [label="(not visited)"]
+	17 [label="flag = True
+"]
+	18 [label="for exit_ in curr_block.exits:
+"]
+	19 [label="flag = False
+if exit_.target not in visited:
+"]
+	21 [label="ind = visited_main.index(exit_.target)
+if cond_main[ind] == 'lh':
+"]
+	"21_calls" [label="visited_main.index" shape=box]
+	21 -> "21_calls" [label=calls style=dashed]
+	24 [label="visited.append(exit_.target)
+arr.append(exit_.target.id)
+brr.append(exit_.target)
+path.append(arr)
+path_block.append(brr)
+"]
+	"24_calls" [label="visited.append
+arr.append
+brr.append
+path.append
+path_block.append" shape=box]
+	24 -> "24_calls" [label=calls style=dashed]
+	25 [label="path_dfs(exit_.target, list(arr), list(brr), visited_main, cond_main)
+"]
+	"25_calls" [label=path_dfs shape=box]
+	25 -> "25_calls" [label=calls style=dashed]
+	22 [label=""]
+	22 -> 18 [label=""]
+	25 -> 22 [label=""]
+	24 -> 25 [label=""]
+	21 -> 24 [label="cond_main[ind] == 'lh'"]
+	21 -> 25 [label="(cond_main[ind] != 'lh')"]
+	19 -> 21 [label="exit_.target not in visited"]
+	23 [label="arr.append(exit_.target.id)
+brr.append(exit_.target)
+path.append(arr)
+path_block.append(brr)
+"]
+	"23_calls" [label="arr.append
+brr.append
+path.append
+path_block.append" shape=box]
+	23 -> "23_calls" [label=calls style=dashed]
+	23 -> 22 [label=""]
+	19 -> 23 [label="(exit_.target in visited)"]
+	18 -> 19 [label="curr_block.exits"]
+	20 [label="if flag:
+"]
+	26 [label="path.append(arr)
+path_block.append(brr)
+"]
+	"26_calls" [label="path.append
+path_block.append" shape=box]
+	26 -> "26_calls" [label=calls style=dashed]
+	27 [label="assert path_bloxk
+"]
+	28 [label=""]
+	27 -> 28 [label="(not path_bloxk)"]
+	29 [label=""]
+	27 -> 29 [label=path_bloxk]
+	26 -> 27 [label=""]
+	20 -> 26 [label=flag]
+	20 -> 27 [label="(not flag)"]
+	18 -> 20 [label=""]
+	17 -> 18 [label=""]
+	10 -> 17 [label=visited]
+	8 -> 10 [label="(not to_visit)"]
+	4 -> 8 [label=visited]
+	2 -> 4 [label=""]
+	1 -> 2 [label=""]
 }
