@@ -1,0 +1,15 @@
+digraph {
+	q0 [label="q0: start"]
+	q1 [label=q1]
+	q2 [label=q2]
+	q3 [label="q3: final"]
+	q4 [label=q4]
+	q0 -> q1
+	q0 -> q2
+	q0 -> q3
+	q1 -> q4
+	q2 -> q4
+	q4 -> q1
+	q4 -> q2
+	q4 -> q3
+}

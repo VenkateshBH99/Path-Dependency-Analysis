@@ -1,0 +1,11 @@
+digraph {
+	Q0 [label="self.visited.append(curr_block)
+self.cond.append(None)
+self.vis_name.append(curr_block.id)
+flag = True
+ ^ "]
+	Q1 [label="curr_block.exits ^  ^ curr_block.exits"]
+	Q2 [label=" ^ Final"]
+	Q0 -> Q1
+	Q1 -> Q2
+}

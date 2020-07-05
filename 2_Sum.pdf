@@ -1,0 +1,8 @@
+digraph {
+	Q0 [label="self.visited = []
+self.vis_name = []
+self.cond = []
+self.path = []
+self.path_block = []
+ ^ Final"]
+}

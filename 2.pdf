@@ -1,0 +1,4 @@
+digraph {
+	q0 [label="q0: start"]
+	q0 -> q0
+}
