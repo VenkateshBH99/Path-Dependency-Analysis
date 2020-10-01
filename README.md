@@ -12,7 +12,7 @@ capable of generating loop invariants in an expressive and decisive language and
 guarantees of invariant quality. A summary of a loop captures the relationship between loop inputs and 
 outputs as a set of symbolic constraints. For instance, we can use a loop summary to check program 
 properties after a loop; and in symbolic execution we can use it to guide test case generation. 
-The aim of this study is to explain the interlacing of multiple paths in a nested or non-nested loop and 
+The aim of this study is to explain the interlacing of the multiple paths in a nested or non-nested loop and 
 to generate a summarization of disjunctive loops for such multi-path loops.
 
 
